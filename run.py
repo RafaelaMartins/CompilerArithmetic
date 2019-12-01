@@ -6,7 +6,8 @@ if __name__ == "__main__":
     p = Stack()
     for x in test:
         if x.isdigit():
-            p.push(x)
+            new = Node(x,None,None)
+            p.push(new)
             p.leitura()
         else:
             node = Node(x)
@@ -18,6 +19,11 @@ if __name__ == "__main__":
             #raiz.root = Node()
             p.push(new)
             p.leitura()
-    raiz = p.stack[0]
-    print(raiz.v)
+    raiz = Tree()
+    raiz.root = p.pop()
+    print(raiz.root.v)
+    print(raiz.root.r.v)
+    print(raiz.root.l.v)
+    print(raiz.root.l.r.v)
+    print(raiz.root.l.l.v)
     
