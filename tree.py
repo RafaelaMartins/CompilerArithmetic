@@ -7,3 +7,11 @@ class Node:
 class Tree:
     def __init__(self):
         self.root = Node()
+    
+    def em_ordem(self, raiz):
+        if not raiz:
+            return
+        self.em_ordem(raiz.l)
+        print(raiz.v),
+        self.em_ordem(raiz.r)
+

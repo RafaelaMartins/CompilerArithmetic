@@ -34,3 +34,5 @@ class Stack:
         print(raiz.root.l.v)
         print(raiz.root.l.r.v)
         print(raiz.root.l.l.v)
+        print("---------------")
+        raiz.em_ordem(raiz.root)
