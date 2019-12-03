@@ -1,4 +1,5 @@
 from tree import Node, Tree
+from interpreter import Interpreter
 
 class Stack:
 
@@ -29,10 +30,12 @@ class Stack:
                 self.push(new)
         raiz = Tree()
         raiz.root = self.pop()
-        print(raiz.root.v)
-        print(raiz.root.r.v)
-        print(raiz.root.l.v)
-        print(raiz.root.l.r.v)
-        print(raiz.root.l.l.v)
+        
         print("---------------")
         raiz.em_ordem(raiz.root)
+        result = Interpreter()
+        x = result.process(raiz.root)
+        print(x)
+        output = open('saida.txt', 'w')
+        output.write(str(x))
+        output.close()
